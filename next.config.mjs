@@ -15,4 +15,14 @@ function defineNextConfig(config) {
 export default defineNextConfig({
   reactStrictMode: true,
   swcMinify: true,
+  experimental: {
+    images: {
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "cdn.discordapp.com"
+        }
+      ]
+    }
+  }
 });
